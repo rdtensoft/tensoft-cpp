@@ -8,6 +8,10 @@
 * Blok 2. Komunikacja sieciowa
 * Blok 3. FireDAC, komunikacja z Firebird 3
 
+# Materiały i dokumentacja
+
+* [Nowoczesny C++Builder](./docs/ModernCBuilder.md)
+
 ## Git Learn
 
 * [Zadanie startowe](./docs/Starter.md)
