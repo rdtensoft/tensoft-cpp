@@ -24,10 +24,10 @@ void TBoardView::DrawBoardItem (int index) {
 	int boardHeight = PaintBox1->Height;
 	int x = index*3;
 	int value = this->FBoardModel->data[index];
-	int len = boardHeight * value / MAX_VALUE;
+	int len = boardHeight * value / BoardModel->MAX_VALUE;
 	// ----------------------------------------------
 	// CalculateVclColor for (hue = value/MAX_VALUE, sat=100%, light=35% );
-	float hue = (float)value/MAX_VALUE;
+	float hue = (float)value/BoardModel->MAX_VALUE;
 	float light = 0.35f;
 	float v2 = light * 2;
 	float v1 = 2 * light - v2;

@@ -34,7 +34,6 @@ __published:	// IDE-managed Components
 	void __fastcall actRunBubbleSortExecute(TObject *Sender);
 	void __fastcall actShuflleDataExecute(TObject *Sender);
 private:	// User declarations
-	void DrawBoardItem (int index);
 	void VisualSwapBoardItems (int i, int j);
 	void qsort(int L, int R);
 	std::unique_ptr<TBoardView> BoardView;
