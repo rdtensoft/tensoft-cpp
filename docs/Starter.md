@@ -63,14 +63,14 @@
 
 ---
 
-* Michał: 
-* Mateusz:
-* Andrzej:
-* Łukasz:
-* Andrzej:
-* Robert:
-* Partycja:
-* Kamil:
+* Michał Jankowski, MichalTensoft: 
+* Mateusz: mateuszbanczyk
+* Andrzej: jestem @tensoft-ab.
+* Łukasz: Łukasz Habrych Luk197801
+* Andrzej: Andrzej Zawadzki  AZawadzki1125
+* Robert Druskóci rdtensoft
+* Partycja: PatrycjaTensoft
+* Kamil: Kamil kkTensoft
 
 * Trener:
 
