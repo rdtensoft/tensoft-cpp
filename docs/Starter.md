@@ -63,8 +63,14 @@
 
 ---
 
-* A: 
-* B: 
+* Michał: 
+* Mateusz:
+* Andrzej:
+* Łukasz:
+* Andrzej:
+* Robert:
+* Partycja:
+* Kamil:
 
 * Trener:
 
