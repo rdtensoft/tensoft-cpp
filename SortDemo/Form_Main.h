@@ -11,6 +11,8 @@
 #include <System.Actions.hpp>
 #include <Vcl.ActnList.hpp>
 #include "View_Board.h"
+#include "Model_Board.h"
+
 //---------------------------------------------------------------------------
 class TForm1 : public TForm
 {
@@ -35,7 +37,8 @@ private:	// User declarations
 	void DrawBoardItem (int index);
 	void VisualSwapBoardItems (int i, int j);
 	void qsort(int L, int R);
-    std::unique_ptr<TBoardView> BoardView;
+	std::unique_ptr<TBoardView> BoardView;
+	std::unique_ptr<TBoardModel> BoardModel;
 public:		// User declarations
 	__fastcall TForm1(TComponent* Owner);
 };

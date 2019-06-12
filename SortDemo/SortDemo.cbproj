@@ -136,6 +136,10 @@
             <DependentOn>Form_Main.h</DependentOn>
             <BuildOrder>2</BuildOrder>
         </CppCompile>
+        <CppCompile Include="Model_Board.cpp">
+            <DependentOn>Model_Board.h</DependentOn>
+            <BuildOrder>4</BuildOrder>
+        </CppCompile>
         <CppCompile Include="SortDemo.cpp">
             <BuildOrder>0</BuildOrder>
         </CppCompile>

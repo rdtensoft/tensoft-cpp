@@ -3,6 +3,7 @@
 #pragma hdrstop
 
 #include "View_Board.h"
+#include "Model_Board.h"
 //---------------------------------------------------------------------------
 #pragma package(smart_init)
 
@@ -22,7 +23,7 @@ void TBoardView::DrawBoardItem (int index) {
 	TCanvas* canvas = PaintBox1->Canvas;
 	int boardHeight = PaintBox1->Height;
 	int x = index*3;
-	int value = data[index];
+	int value = this->FBoardModel->data[index];
 	int len = boardHeight * value / MAX_VALUE;
 	// ----------------------------------------------
 	// CalculateVclColor for (hue = value/MAX_VALUE, sat=100%, light=35% );
