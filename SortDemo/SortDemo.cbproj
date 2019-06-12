@@ -143,6 +143,10 @@
             <BuildOrder>1</BuildOrder>
             <PCH>true</PCH>
         </PCHCompile>
+        <CppCompile Include="View_Board.cpp">
+            <DependentOn>View_Board.h</DependentOn>
+            <BuildOrder>3</BuildOrder>
+        </CppCompile>
         <FormResources Include="Form_Main.dfm"/>
         <BuildConfiguration Include="Release">
             <Key>Cfg_2</Key>

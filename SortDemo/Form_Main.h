@@ -10,6 +10,7 @@
 #include <Vcl.ExtCtrls.hpp>
 #include <System.Actions.hpp>
 #include <Vcl.ActnList.hpp>
+#include "View_Board.h"
 //---------------------------------------------------------------------------
 class TForm1 : public TForm
 {
@@ -33,7 +34,8 @@ __published:	// IDE-managed Components
 private:	// User declarations
 	void DrawBoardItem (int index);
 	void VisualSwapBoardItems (int i, int j);
-    void qsort(int L, int R);
+	void qsort(int L, int R);
+    std::unique_ptr<TBoardView> BoardView;
 public:		// User declarations
 	__fastcall TForm1(TComponent* Owner);
 };

@@ -19,6 +19,9 @@ static std::vector<int> data;
 __fastcall TForm1::TForm1(TComponent* Owner)
 	: TForm(Owner)
 {
+	BoardView.reset(new TBoardView());
+	BoardView->PaintBox1 = PaintBox1;
+	BoardView->MAX_VALUE = MAX_VALUE;
 }
 //---------------------------------------------------------------------------
 void __fastcall TForm1::tmrReadyTimer(TObject *Sender)
@@ -65,8 +68,10 @@ void TForm1::DrawBoardItem (int index) {
 //---------------------------------------------------------------------------
 void __fastcall TForm1::PaintBox1Paint(TObject *Sender)
 {
+	BoardView->data = data;
 	for (unsigned int i=0; i<data.size(); i++) {
-		DrawBoardItem(i);
+		BoardView->DrawBoardItem(i);
+		// DrawBoardItem(i);
 	}
 }
 //---------------------------------------------------------------------------
