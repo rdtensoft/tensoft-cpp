@@ -27,7 +27,7 @@ TProgressBar* __fastcall TForm1::ProgressBarFactory (TComponent* AOwner) {
 //---------------------------------------------------------------------------
 void __fastcall TForm1::Button1Click(TObject *Sender)
 {
-	TProgressTread* Tread = new TProgressTread(false,ProgressBarFactory(this));
+	TProgressThread* Tread = new TProgressThread(false,ProgressBarFactory(this));
 
 
 	for (int i = GroupBox2->ComponentCount-1; i >= 0 ; i--) {

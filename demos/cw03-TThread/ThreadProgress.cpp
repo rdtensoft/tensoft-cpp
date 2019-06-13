@@ -20,7 +20,7 @@
 //      }
 //---------------------------------------------------------------------------
 
-__fastcall TProgressTread::TProgressTread(bool CreateSuspended, TProgressBar* bar)
+__fastcall TProgressThread::TProgressThread(bool CreateSuspended, TProgressBar* bar)
 	: TThread(CreateSuspended)
 {
 
@@ -28,7 +28,7 @@ __fastcall TProgressTread::TProgressTread(bool CreateSuspended, TProgressBar* ba
 	pbar = bar;
 }
 //---------------------------------------------------------------------------
-void __fastcall TProgressTread::Execute()
+void __fastcall TProgressThread::Execute()
 {
 	NameThreadForDebugging(System::String(L"Progress Tread"));
 	//---- Place thread code here ----
@@ -40,7 +40,7 @@ void __fastcall TProgressTread::Execute()
 	}
 }
 //---------------------------------------------------------------------------
-void __fastcall TProgressTread::UpdateProgressBar()
+void __fastcall TProgressThread::UpdateProgressBar()
 {
 	if(pbar->Position > 0)
 	{
