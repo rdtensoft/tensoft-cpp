@@ -24,7 +24,7 @@ __fastcall TProgressTread::TProgressTread(bool CreateSuspended, TProgressBar* ba
 	: TThread(CreateSuspended)
 {
 
-	this->FreeOnTerminate = false;
+	this->FreeOnTerminate = true;
 	pbar = bar;
 }
 //---------------------------------------------------------------------------
@@ -33,12 +33,21 @@ void __fastcall TProgressTread::Execute()
 	NameThreadForDebugging(System::String(L"Progress Tread"));
 	//---- Place thread code here ----
 	Sleep(1000);
-	while(pbar->Position != 0)
+	while(!Terminated)
+	{
+		 Synchronize(&UpdateProgressBar);
+		 Sleep(1);
+	}
+}
+//---------------------------------------------------------------------------
+void __fastcall TProgressTread::UpdateProgressBar()
+{
+	if(pbar->Position > 0)
 	{
 		--pbar->Position;
-	   	Sleep(1);
 	}
-    pbar->Visible = false;
+	else
+		pbar->Visible = false;
 }
 //---------------------------------------------------------------------------
 

@@ -27,9 +27,15 @@ TProgressBar* __fastcall TForm1::ProgressBarFactory (TComponent* AOwner) {
 //---------------------------------------------------------------------------
 void __fastcall TForm1::Button1Click(TObject *Sender)
 {
-   //	ProgressBarFactory(this);
-	TProgressTread* Tread = new TProgressTread(true,ProgressBarFactory(this));
-	// new TProgressTread(tre / false);
-	Tread->Start();
+	TProgressTread* Tread = new TProgressTread(false,ProgressBarFactory(this));
+
+
+	for (int i = GroupBox2->ComponentCount-1; i >= 0 ; i--) {
+		TProgressBar * pBar = dynamic_cast<TProgressBar*>(GroupBox2->Components[i]);
+		if(pBar && !pBar->Visible)
+			delete pBar;
+
+	}
+
 }
 //---------------------------------------------------------------------------

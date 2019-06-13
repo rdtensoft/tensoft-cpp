@@ -12,6 +12,7 @@ class TProgressTread : public TThread
 protected:
 	void __fastcall Execute();
 	TProgressBar* pbar;
+    void __fastcall UpdateProgressBar();
 public:
 	__fastcall TProgressTread(bool CreateSuspended, TProgressBar* bar );
 };
