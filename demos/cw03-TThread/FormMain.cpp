@@ -27,7 +27,9 @@ TProgressBar* __fastcall TForm1::ProgressBarFactory (TComponent* AOwner) {
 //---------------------------------------------------------------------------
 void __fastcall TForm1::Button1Click(TObject *Sender)
 {
-	ProgressBarFactory(this);
-    // new TProgressTread(tre / false);
+   //	ProgressBarFactory(this);
+	TProgressTread* Tread = new TProgressTread(true,ProgressBarFactory(this));
+	// new TProgressTread(tre / false);
+	Tread->Start();
 }
 //---------------------------------------------------------------------------
