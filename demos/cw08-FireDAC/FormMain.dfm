@@ -3,7 +3,7 @@ object Form1: TForm1
   Top = 0
   ActiveControl = Button1
   Caption = 'Form1'
-  ClientHeight = 325
+  ClientHeight = 391
   ClientWidth = 678
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
@@ -19,11 +19,10 @@ object Form1: TForm1
     Left = 3
     Top = 3
     Width = 198
-    Height = 319
+    Height = 385
     Align = alLeft
     Caption = 'GroupBox1'
     TabOrder = 0
-    ExplicitTop = -2
     object GroupBox2: TGroupBox
       AlignWithMargins = True
       Left = 5
@@ -34,9 +33,6 @@ object Form1: TForm1
       Align = alTop
       Caption = 'FDConnection'
       TabOrder = 0
-      ExplicitLeft = 10
-      ExplicitTop = 40
-      ExplicitWidth = 185
       object Button1: TButton
         AlignWithMargins = True
         Left = 5
@@ -47,8 +43,6 @@ object Form1: TForm1
         Caption = 'Button1'
         TabOrder = 0
         OnClick = Button1Click
-        ExplicitLeft = 7
-        ExplicitWidth = 188
       end
       object Button2: TButton
         AlignWithMargins = True
@@ -60,9 +54,6 @@ object Form1: TForm1
         Caption = 'Button2'
         TabOrder = 1
         OnClick = Button2Click
-        ExplicitLeft = 56
-        ExplicitTop = 112
-        ExplicitWidth = 75
       end
       object Button3: TButton
         AlignWithMargins = True
@@ -74,9 +65,6 @@ object Form1: TForm1
         Caption = 'Button3'
         TabOrder = 2
         OnClick = Button3Click
-        ExplicitLeft = 56
-        ExplicitTop = 112
-        ExplicitWidth = 75
       end
       object Button4: TButton
         AlignWithMargins = True
@@ -88,8 +76,41 @@ object Form1: TForm1
         Caption = 'Button4'
         TabOrder = 3
         OnClick = Button4Click
-        ExplicitLeft = 7
-        ExplicitWidth = 188
+      end
+    end
+    object GroupBox3: TGroupBox
+      AlignWithMargins = True
+      Left = 5
+      Top = 184
+      Width = 188
+      Height = 137
+      Align = alTop
+      Caption = 'FDQuery'
+      TabOrder = 1
+      object Button5: TButton
+        AlignWithMargins = True
+        Left = 5
+        Top = 18
+        Width = 178
+        Height = 25
+        Align = alTop
+        Caption = 'Button5'
+        TabOrder = 0
+        OnClick = Button5Click
+      end
+      object Button6: TButton
+        AlignWithMargins = True
+        Left = 5
+        Top = 49
+        Width = 178
+        Height = 25
+        Align = alTop
+        Caption = 'Button6'
+        TabOrder = 1
+        OnClick = Button6Click
+        ExplicitLeft = 56
+        ExplicitTop = 56
+        ExplicitWidth = 75
       end
     end
   end
@@ -98,16 +119,21 @@ object Form1: TForm1
     Left = 207
     Top = 3
     Width = 468
-    Height = 319
+    Height = 385
     Align = alClient
     TabOrder = 1
-    ExplicitTop = -2
   end
   object FDConnection1: TFDConnection
     Params.Strings = (
       'ConnectionDef=FB_Demo')
-    Connected = True
     Left = 248
     Top = 32
+  end
+  object FDQuery1: TFDQuery
+    Connection = FDConnection1
+    SQL.Strings = (
+      'SELECT * FROM FDQA_PRODUCTS')
+    Left = 248
+    Top = 96
   end
 end
